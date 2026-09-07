@@ -53,11 +53,12 @@ Projeto desenvolvido por estudantes do **IFBA — Campus Feira de Santana**.
 
 **COLE NO BANCO DE DADOS**
 
+```sql
 CREATE TABLE pacientes (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(14) UNIQUE NOT NULL,
     telefone VARCHAR(20),
     email VARCHAR(100),
-	convenio VARCHAR(20)
+    convenio VARCHAR(20)
 );
