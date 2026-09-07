@@ -9,7 +9,7 @@ public class TesteBanco {
         
         // 1. Criamos um paciente com dados fictícios.
         // O primeiro campo (ID) vai como 'null' porque o banco (SERIAL) cuida disso.
-        Paciente pacienteTeste = new Paciente(null, "Isaac", "444.444.444-44", "74999897252", "isaac@email.com");
+        Paciente pacienteTeste = new Paciente(null, "Isaac", "444.444.444-44", "74999897252", "isaac@email.com", "abc");
         
         // 2. Instanciamos o nosso repositório
         PacienteRepository repository = new PacienteRepository();

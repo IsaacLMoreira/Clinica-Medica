@@ -42,8 +42,10 @@ public class Main {
                     String telCadastro = scanner.nextLine();
                     System.out.print("E-mail: ");
                     String emailCadastro = scanner.nextLine();
+                    System.out.print("Convênio: ");
+                    String convenioCadastro = scanner.nextLine();
 
-                    Paciente novoPaciente = new Paciente(idCadastro, nomeCadastro, cpfCadastro, telCadastro, emailCadastro);
+                    Paciente novoPaciente = new Paciente(idCadastro, nomeCadastro, cpfCadastro, telCadastro, emailCadastro, convenioCadastro);
                     repository.salvar(novoPaciente);
                     break;
 
@@ -54,7 +56,7 @@ public class Main {
                         System.out.println("Nenhum paciente cadastrado.");
                     } else {
                         for (Paciente p : todosPacientes) {
-                            System.out.println("ID: " + p.getId() + " | Nome: " + p.getNome() + " | CPF: " + p.getCpf());
+                            System.out.println("ID: " + p.getId() + " | Nome: " + p.getNome() + " | CPF: " + p.getCpf() + " | Convênio: " + p.getConvenio());
                         }
                     }
                     break;
@@ -69,7 +71,7 @@ public class Main {
                         System.out.println("Nenhum paciente encontrado com essas credenciais.");
                     } else {
                         for (Paciente p : pacientesEncontrados) {
-                            System.out.println("ID: " + p.getId() + " | Nome: " + p.getNome() + " | CPF: " + p.getCpf() + " | Telefone: " + p.getTelefone() + " | E-mail: " + p.getEmail());
+                            System.out.println("ID: " + p.getId() + " | Nome: " + p.getNome() + " | CPF: " + p.getCpf() + " | Telefone: " + p.getTelefone() + " | E-mail: " + p.getEmail() + " | Convênio: " + p.getConvenio());
                         }
                     }
                     break;
@@ -87,8 +89,10 @@ public class Main {
                     String telEdit = scanner.nextLine();
                     System.out.print("Novo E-mail: ");
                     String emailEdit = scanner.nextLine();
+                    System.out.print("Novo Convênio: ");
+                    String convenioEdit = scanner.nextLine();
 
-                    Paciente pacienteAtualizado = new Paciente(idEditar, nomeEdit, cpfEdit, telEdit, emailEdit);
+                    Paciente pacienteAtualizado = new Paciente(idEditar, nomeEdit, cpfEdit, telEdit, emailEdit, convenioEdit);
                     repository.atualizar(pacienteAtualizado);
                     break;
 

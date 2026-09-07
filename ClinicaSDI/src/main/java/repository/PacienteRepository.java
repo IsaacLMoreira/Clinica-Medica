@@ -63,7 +63,8 @@ public class PacienteRepository {
                     resultado.getString("nome"),
                     resultado.getString("cpf"),
                     resultado.getString("telefone"),
-                    resultado.getString("email")
+                    resultado.getString("email"),
+                    resultado.getString("convenio")
                 );
                 lista.add(paciente);
             }
@@ -98,7 +99,8 @@ public class PacienteRepository {
                         resultado.getString("nome"),
                         resultado.getString("cpf"),
                         resultado.getString("telefone"),
-                        resultado.getString("email")
+                        resultado.getString("email"),
+                        resultado.getString("convenio")
                     );
                     lista.add(paciente);
                 }
