@@ -6,6 +6,7 @@ public abstract class Pessoa {
     private String cpf;
     private String telefone;
     private String email;
+    private String data_nascimento;
 
     // Construtor padrão e construtor com parâmetros para inicializar os atributos da classe
     public Pessoa() {
@@ -13,11 +14,12 @@ public abstract class Pessoa {
 
     // Construtor com parâmetros para inicializar os atributos da classe
     // O construtor com parâmetros é útil para criar objetos da classe Pessoa com valores iniciais para os atributos
-    public Pessoa(String nome, String cpf, String telefone, String email) {
+    public Pessoa(String nome, String cpf, String telefone, String email, String data_nascimento) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
+        this.data_nascimento = data_nascimento;
     }
 
     // Getters e Setters de todos os atributos
@@ -45,4 +47,7 @@ public abstract class Pessoa {
     public void setEmail(String email) {
          this.email = email; 
         }
+    public String setData_nascimento(String data_nascimento){
+        return data_nascimento;
+    }
 }
