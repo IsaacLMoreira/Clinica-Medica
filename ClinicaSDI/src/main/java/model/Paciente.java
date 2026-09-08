@@ -12,10 +12,9 @@ public class Paciente extends Pessoa {
         // o super() chama o construtor da classe pai (Pessoa) para inicializar os atributos herdados
     }
 
-    public Paciente(Integer id, String nome, String cpf, String telefone, String email, String convenio) {
-        super(nome, cpf, telefone, email);
+    public Paciente(Integer id, String nome, String cpf, String telefone, String email, String convenio, String data_nascimento) {
+        super(nome, cpf, telefone, email, convenio, data_nascimento);
         this.id = id;
-        this.convenio = convenio; // AQUI FALTAVA ATRIBUIR O CONVÊNIO
     }
 
     // Getters e Setters do atributo id
